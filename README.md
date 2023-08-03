@@ -1,1 +1,3 @@
-# TAREASOLID
+# Sebastian Rodriguez
+David Galeano
+Jose
