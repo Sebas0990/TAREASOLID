@@ -4,9 +4,8 @@ public abstract class Carro {
 
     public String marca;
 
-    String getMarcaCoche() {
-        return marca;
-    }
+    abstract String getMarcaCoche();
+    abstract int getPrecioCoche();
 
     void guardarCocheDB(Carro carro) {
         System.out.println("Guarde en BD");
@@ -14,12 +13,7 @@ public abstract class Carro {
 
     public static void imprimirPrecioMedioCoche(Carro[] carros) {
         for (Carro carro : carros) {
-            if (carro.marca.equals("Renault")) {
-                System.out.println(18000);
-            }
-            if (carro.marca.equals("Audi")) {
-                System.out.println(25000);
-            }
+            System.out.println(carro.getPrecioCoche());
         }
     }
 }

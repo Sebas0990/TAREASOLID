@@ -2,18 +2,19 @@ package modelo;
 
 public class Audi extends Carro{
 
-    public int precio;
-    public String marca = this.getClass().getSimpleName();
+    private int precio;
+    private String marca = this.getClass().getSimpleName();
 
     public Audi(int precio) {
         
         this.precio = precio;
     }
-    public int getPrecio() {
+    @Override
+    public int getPrecioCoche() {
         return precio;
     }
-
-    public String getMarca() {
+    @Override
+    public String getMarcaCoche(){
         return marca;
     }
     
