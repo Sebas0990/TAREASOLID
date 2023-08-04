@@ -1,12 +1,19 @@
 package logica;
 
-import bd.DatabaseMysql;
 import modelo.Carro;
 
 public class CarroService {
 
-    public void guardarCocheDB(Carro carro) {
-        DatabaseMysql db = new DatabaseMysql();
-        db.guardar();
+    private IDatos datos;
+    
+    public CarroService(IDatos datos) {
+        this.datos = datos;
     }
+
+    
+    public void guardarCocheDB(Carro carro) {
+        System.out.println("Guarde en BD");
+        datos.guardarDB();
+    }
+    
 }
