@@ -1,3 +1,3 @@
 # Sebastian Rodriguez
 David Galeano
-Jose
+# Jose Luis Tovar
