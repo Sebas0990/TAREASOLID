@@ -4,10 +4,6 @@ public abstract class Carro {
 
     public String marca;
 
-    public Carro(String marca) {
-        this.marca = marca;
-    }
-
     String getMarcaCoche() {
         return marca;
     }

@@ -8,14 +8,14 @@ import modelo.Renault;
 public class Main {
     public static void main(String[] args) {
         Carro[] arrayCoches = {
-                new Renault("Renault", 18000),
-                new Audi("Audi", 25000)
+                new Renault(18000),
+                new Audi(25000)
         };
         Carro.imprimirPrecioMedioCoche(arrayCoches);
 
         //Guardar carro en la BD.
         CarroService service = new CarroService();
-        service.guardarCocheDB(new Renault("Renault", 25000));
+        service.guardarCocheDB(new Renault(25000));
 
     }
 }

@@ -5,9 +5,16 @@ public class Renault extends Carro{
     public int precio;
     public String marca = this.getClass().getSimpleName();
     
-    public Renault(String marca, int precio) {
-        super(marca);
+    public Renault(int precio) {
+        
         this.precio = precio;
+    }
+    public int getPrecio() {
+        return precio;
+    }
+
+    public String getMarca() {
+        return marca;
     }
 
     

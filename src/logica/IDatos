@@ -1,5 +1,5 @@
 package logica;
 
 public interface IDatos{
-    void guardarCarro();
+    void guardarCocheDB();
 }
