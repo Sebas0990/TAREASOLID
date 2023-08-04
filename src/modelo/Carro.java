@@ -1,6 +1,6 @@
 package modelo;
 
-public class Carro {
+public abstract class Carro {
 
     public String marca;
 
@@ -14,5 +14,16 @@ public class Carro {
 
     void guardarCocheDB(Carro carro) {
         System.out.println("Guarde en BD");
+    }
+
+    public static void imprimirPrecioMedioCoche(Carro[] carros) {
+        for (Carro carro : carros) {
+            if (carro.marca.equals("Renault")) {
+                System.out.println(18000);
+            }
+            if (carro.marca.equals("Audi")) {
+                System.out.println(25000);
+            }
+        }
     }
 }

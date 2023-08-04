@@ -1,30 +1,21 @@
 package main;
 
 import logica.CarroService;
+import modelo.Audi;
 import modelo.Carro;
+import modelo.Renault;
 
 public class Main {
     public static void main(String[] args) {
         Carro[] arrayCoches = {
-                new Carro("Renault"),
-                new Carro("Audi")
+                new Renault("Renault", 18000),
+                new Audi("Audi", 25000)
         };
-        imprimirPrecioMedioCoche(arrayCoches);
+        Carro.imprimirPrecioMedioCoche(arrayCoches);
 
         //Guardar carro en la BD.
         CarroService service = new CarroService();
-        service.guardarCocheDB(new Carro("Renault"));
+        service.guardarCocheDB(new Renault("Renault", 25000));
 
-    }
-
-    public static void imprimirPrecioMedioCoche(Carro[] carros) {
-        for (Carro carro : carros) {
-            if (carro.marca.equals("Renault")) {
-                System.out.println(18000);
-            }
-            if (carro.marca.equals("Audi")) {
-                System.out.println(25000);
-            }
-        }
     }
 }
